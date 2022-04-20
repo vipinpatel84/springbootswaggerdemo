@@ -17,7 +17,7 @@ public class SwaggerApplicationConfiguration {
     public static final Contact DEFAULT_CONTACT = new Contact("Vipin Patel", "https://github.com/vipinpatel84", "");
 
     //private static final ApiInfo DEFAULT_API_INFO= new ApiInfo("Api info", "APi Documentation" ,"1.0","1.0", DEFAULT_CONTACT.getName(), "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
-    public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("RESTful API Demo", "Api Documentation Demo", "1.0", "urn:tos",
+    public static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Spring Swagger API demo", "Swagger sApi Documentation Demo", "1.0", "urn:tos",
             DEFAULT_CONTACT, "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0", new ArrayList<VendorExtension>());
 
     private final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = new HashSet<>(Arrays.asList("application/json","appication/xml"));

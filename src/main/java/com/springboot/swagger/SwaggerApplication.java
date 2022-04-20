@@ -13,7 +13,6 @@ public class SwaggerApplication {
 		SpringApplication.run(SwaggerApplication.class, args);
 	}
 
-
 	@GetMapping("/")
 	public String getHelloSwagger(){
 		return "Hello Swaggger";

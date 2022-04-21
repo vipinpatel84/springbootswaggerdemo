@@ -14,6 +14,10 @@ import java.util.*;
 @Configuration
 @EnableSwagger2
 public class SwaggerApplicationConfiguration {
+    /**
+     * http://localhost:9000/swagger-ui.html#/
+     * http://localhost:9000/v2/api-docs
+     */
     public static final Contact DEFAULT_CONTACT = new Contact("Vipin Patel", "https://github.com/vipinpatel84", "");
 
     //private static final ApiInfo DEFAULT_API_INFO= new ApiInfo("Api info", "APi Documentation" ,"1.0","1.0", DEFAULT_CONTACT.getName(), "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");

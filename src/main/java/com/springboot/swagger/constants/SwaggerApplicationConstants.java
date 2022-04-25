@@ -15,6 +15,7 @@ public class SwaggerApplicationConstants {
         errorCodeMap.put(ERR_02,EMPTY_FIRST_NAME);
         errorCodeMap.put(ERR_03,EMPTY_LAST_NAME);
         errorCodeMap.put(ERR_04,EMPTY_PASSWORD);
+        errorCodeMap.put(ERR_05,ACCOUNT_ALREADY_EXIST);
         return errorCodeMap;
     }
 
@@ -29,4 +30,7 @@ public class SwaggerApplicationConstants {
 
     public static final String ERR_04="ERROR_04";
     public static final String EMPTY_PASSWORD="Empty Password Name or Null value passed";
+
+    public static final String ERR_05="ERROR_05";
+    public static final String ACCOUNT_ALREADY_EXIST="Email Address already exist, Kindly recheck your email address";
 }

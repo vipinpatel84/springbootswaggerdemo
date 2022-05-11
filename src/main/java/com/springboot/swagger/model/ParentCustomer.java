@@ -1,6 +1,8 @@
 package com.springboot.swagger.model;
 
-public class ParentCustomer {
+import java.io.Serializable;
+
+public class ParentCustomer implements Serializable {
 
     private String emailAddress;
     private String firstName;

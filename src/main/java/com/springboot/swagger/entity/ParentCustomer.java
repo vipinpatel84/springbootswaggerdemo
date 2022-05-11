@@ -1,19 +1,17 @@
 package com.springboot.swagger.entity;
 
-//import org.springframework.data.annotation.Id;
-//
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.Table;
-import java.io.Serializable;
-import java.util.Objects;
+import javax.persistence.*;
+import java.util.UUID;
 
-//@Entity
-//@Table(name="parentCustomer")
-public class ParentCustomer  implements Serializable {
-    private static final long serialVersionUID = 1L;
+@Entity
+//@IdClass(com.springboot.swagger.model.ParentCustomer.class)
+public class ParentCustomer {
+    //private static final long serialVersionUID = 1L;
 
 //    @Id
+//    @GeneratedValue(strategy= GenerationType.AUTO)
+//    private UUID id;
+    @Id
     //(name="emailAddress")
     private String emailAddress;
 
@@ -66,10 +64,5 @@ public class ParentCustomer  implements Serializable {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(password);
     }
 }

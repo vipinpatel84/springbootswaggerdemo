@@ -16,6 +16,8 @@ public class SwaggerApplicationConstants {
         errorCodeMap.put(ERR_03,EMPTY_LAST_NAME);
         errorCodeMap.put(ERR_04,EMPTY_PASSWORD);
         errorCodeMap.put(ERR_05,ACCOUNT_ALREADY_EXIST);
+        errorCodeMap.put(ERR_06,KAFKA_DOWN);
+
         return errorCodeMap;
     }
 
@@ -33,4 +35,7 @@ public class SwaggerApplicationConstants {
 
     public static final String ERR_05="ERROR_05";
     public static final String ACCOUNT_ALREADY_EXIST="Email Address already exist, Kindly recheck your email address";
+    public static final String ERR_06="ERROR_06";
+    public static final String KAFKA_DOWN="Unable to create customer, Due to Temporary issue";
+    public static final String INPROGRESS="IN_PROGRESS";
 }

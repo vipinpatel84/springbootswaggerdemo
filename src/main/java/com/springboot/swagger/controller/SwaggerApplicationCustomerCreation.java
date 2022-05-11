@@ -3,6 +3,7 @@ package com.springboot.swagger.controller;
 import com.springboot.swagger.SwaggerApplication;
 import com.springboot.swagger.constants.SwaggerApplicationConstants;
 import com.springboot.swagger.exception.SwaggerApplicationException;
+import com.springboot.swagger.model.Acknowledgement;
 import com.springboot.swagger.model.ErrorModel;
 import com.springboot.swagger.model.ParentCustomer;
 import com.springboot.swagger.service.SwaggerApplicationCustomerService;
@@ -34,17 +35,17 @@ public class SwaggerApplicationCustomerCreation {
     @PostMapping(value = "/createCustomer",produces = MediaType.APPLICATION_JSON_VALUE)
     public Object createCustomer(@RequestBody ParentCustomer parentCustomer) {
         LOGGER.info("Parent Customer {}", parentCustomer);
-        try{
-            swaggerApplicationService.createParentCustomer(parentCustomer);
-        }
-        catch (SwaggerApplicationException exception){
-            HashMap<String,String> errorCode=  applicationConstants.setErrorCode();
+        Acknowledgement acknowledgement;
+        try {
+            acknowledgement = swaggerApplicationService.createParentCustomer(parentCustomer);
+        } catch (SwaggerApplicationException exception) {
+            HashMap<String, String> errorCode = applicationConstants.setErrorCode();
             ErrorModel errorModel = new ErrorModel();
             errorModel.setErrorCode(exception.getMessage());
             errorModel.setErrorDescription(errorCode.get(exception.getMessage()));
-            return  new ResponseEntity<>(errorModel,HttpStatus.PRECONDITION_FAILED); // Http Status 412
+            return new ResponseEntity<>(errorModel, HttpStatus.PRECONDITION_FAILED); // Http Status 412
         }
 
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(acknowledgement, HttpStatus.CREATED);
     }
 }

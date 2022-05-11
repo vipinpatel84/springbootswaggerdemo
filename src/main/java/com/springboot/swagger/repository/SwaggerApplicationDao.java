@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @EnableJpaRepositories
-public interface SwaggerApplicationDao extends JpaRepository<ParentCustomer,String> {
+public interface SwaggerApplicationDao extends CrudRepository<ParentCustomer,String> {
 }

@@ -4,24 +4,13 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-//@IdClass(com.springboot.swagger.model.ParentCustomer.class)
 public class ParentCustomer {
-    //private static final long serialVersionUID = 1L;
-
-//    @Id
-//    @GeneratedValue(strategy= GenerationType.AUTO)
-//    private UUID id;
     @Id
-    //(name="emailAddress")
     private String emailAddress;
 
-    //(name="password")
     private String password;
-
-    //(name="firstName")
     private String firstName;
 
-    //(name="lastName")
     private String lastName;
 
     public String getEmailAddress() {

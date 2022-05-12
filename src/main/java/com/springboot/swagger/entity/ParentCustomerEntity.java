@@ -1,10 +1,9 @@
 package com.springboot.swagger.entity;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
-public class ParentCustomer {
+public class ParentCustomerEntity {
     @Id
     private String emailAddress;
 
@@ -12,6 +11,17 @@ public class ParentCustomer {
     private String firstName;
 
     private String lastName;
+
+    public String getCustomerNumber() {
+        return customerNumber;
+    }
+
+    public void setCustomerNumber(String customerNumber) {
+        this.customerNumber = customerNumber;
+    }
+
+    @OneToOne(mappedBy = "parent_customer",cascade = CascadeType.ALL)
+    private  String customerNumber;
 
     public String getEmailAddress() {
         return emailAddress;

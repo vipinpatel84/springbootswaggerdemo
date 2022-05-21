@@ -20,7 +20,7 @@ public class ParentCustomerEntity {
         this.customerNumber = customerNumber;
     }
 
-    @OneToOne(mappedBy = "parent_customer",cascade = CascadeType.ALL)
+   // @OneToOne(mappedBy = "parent_customer",cascade = CascadeType.ALL)
     private  String customerNumber;
 
     public String getEmailAddress() {

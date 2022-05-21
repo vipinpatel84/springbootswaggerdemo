@@ -2,7 +2,7 @@ package com.springboot.swagger.entity;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity
 public class ChildCustomerEntity {
 
     private String firstName;
